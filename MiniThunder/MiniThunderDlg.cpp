@@ -299,11 +299,11 @@ void CMiniThunderDlg::OnTimer(UINT nIDEvent)
 			PrintTaskInfo(info.stat, info);
 			_stprintf(szBuffer, "当前速度：%0.2fMbps", ((info.nSpeed / 1024.0f) / 1024.0f));
 			m_Recv_Speed.SetWindowText(szBuffer);
-			_stprintf(szBuffer, "已经更新：%0.2f%%", info.fPercent * 100.0f);
+			_stprintf(szBuffer, "已经下载：%0.2f%%", info.fPercent * 100.0f);
 			m_Recv_Precent.SetWindowText(szBuffer);
 			_stprintf(szBuffer, "文件大小：%0.2fMB", ((info.nTotalSize / 1024.0f) / 1024.0f));
 			m_File_TotalSize.SetWindowText(szBuffer);
-			_stprintf(szBuffer, "更新进度：%0.2fMB", ((info.nTotalDownload / 1024.0f) / 1024.0f));
+			_stprintf(szBuffer, "当前进度：%0.2fMB", ((info.nTotalDownload / 1024.0f) / 1024.0f));
 			m_Recv_TotalDownload.SetWindowText(szBuffer);
 			_stprintf(szBuffer, "资源加速：%0.2fMB", (((info.nTotalDownload - info.nDonationOrgin) / 1024.0f) / 1024.0f));
 			m_Share_Speed.SetWindowText(szBuffer);
@@ -388,7 +388,7 @@ void CMiniThunderDlg::OnBnClickedButtonStarDown()
 					m_Recv_Speed.SetWindowText("当前速度：");
 					m_Recv_Precent.SetWindowText("已经下载：");
 					m_File_TotalSize.SetWindowText("文件大小：");
-					m_Recv_TotalDownload.SetWindowText("更新进度：");
+					m_Recv_TotalDownload.SetWindowText("当前进度：");
 					m_Share_Speed.SetWindowText("资源加速：");
 					m_Share_Count.SetWindowText("资源数量：");
 					SetWindowText("MiniThunder");
